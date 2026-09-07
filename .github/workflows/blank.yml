@@ -34,5 +34,5 @@ jobs:
       - name: Run a one-line script
         run: echo "$Greeting, AK is using $cloud!"
         env :
-        aws_access_keys = ${{secrets.aws_access_keys}}
+        aws_access_keys : ${{secrets.aws_access_keys}}
       
