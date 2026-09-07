@@ -33,9 +33,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo "$Greeting, AK is using $cloud!"
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+        env :
+        aws_access_keys = ${{secrets.aws_access_keys}}
+      
